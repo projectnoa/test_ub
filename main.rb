@@ -3,7 +3,7 @@
 require 'getoptlong'
 
 load 'extensions.rb'
-load 'operator.rb'
+load 'classes/operator.rb'
 
 # Argument keys accepted
 HELP_KEY = '--help'
@@ -56,7 +56,6 @@ if ARGV.any? { |s| s.include?(HELP_KEY) || s.include?(HELP_KEY_S) }
 else
   # Initialize operations array
   operations = []
-
   # Parse arguments passed
   opts.each do |opt, arg|
     # Ignore if empty or nil
